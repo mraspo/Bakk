@@ -1,0 +1,2077 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="osmogd" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/osmogd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/osmogd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="gdal-1.9.2/alg/contour.cpp" />
+		<Unit filename="gdal-1.9.2/alg/fpolygonize.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdal_crs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/alg/gdal_nrgcrs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/alg/gdal_rpc.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdal_tps.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalchecksum.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalcutline.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdaldither.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalgeoloc.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalgrid.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalmediancut.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalproximity.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalrasterfpolygonenumerator.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalrasterize.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalrasterpolygonenumerator.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalsievefilter.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalsimplewarp.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdaltransformer.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalwarper.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalwarpkernel.cpp" />
+		<Unit filename="gdal-1.9.2/alg/gdalwarpkernel_opencl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/alg/gdalwarpoperation.cpp" />
+		<Unit filename="gdal-1.9.2/alg/llrasterize.cpp" />
+		<Unit filename="gdal-1.9.2/alg/polygonize.cpp" />
+		<Unit filename="gdal-1.9.2/alg/rasterfill.cpp" />
+		<Unit filename="gdal-1.9.2/alg/thinplatespline.cpp" />
+		<Unit filename="gdal-1.9.2/apps/commonutils.cpp" />
+		<Unit filename="gdal-1.9.2/apps/dumpoverviews.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdal2ogr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/apps/gdal_contour.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdal_grid.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdal_rasterize.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdal_translate.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdaladdo.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalasyncread.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalbuildvrt.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdaldem.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalenhance.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalflattenmask.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/apps/gdalinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/apps/gdallocationinfo.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalmanage.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalsrsinfo.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdaltindex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/apps/gdaltorture.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdaltransform.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalwarp.cpp" />
+		<Unit filename="gdal-1.9.2/apps/gdalwarpsimple.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/apps/multireadtest.cpp" />
+		<Unit filename="gdal-1.9.2/apps/nearblack.cpp" />
+		<Unit filename="gdal-1.9.2/apps/ogr2ogr.cpp" />
+		<Unit filename="gdal-1.9.2/apps/ogrdissolve.cpp" />
+		<Unit filename="gdal-1.9.2/apps/ogrinfo.cpp" />
+		<Unit filename="gdal-1.9.2/apps/ogrtindex.cpp" />
+		<Unit filename="gdal-1.9.2/apps/test_ogrsf.cpp" />
+		<Unit filename="gdal-1.9.2/apps/testepsg.cpp" />
+		<Unit filename="gdal-1.9.2/apps/testreprojmulti.cpp" />
+		<Unit filename="gdal-1.9.2/bridge/bridge_test.cpp" />
+		<Unit filename="gdal-1.9.2/bridge/gbgetsymbol.cpp" />
+		<Unit filename="gdal-1.9.2/bridge/gdalbridge.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/aaigrid/aaigriddataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/adrg/adrgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/adrg/srpdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/aigrid/aigccitt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/aigrid/aigdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/aigrid/aigopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/aigrid/aitest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/aigrid/gridlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/airsar/airsardataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/blx/blx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/blx/blxdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/bmp/bmpdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/bsb/bsb2raw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/bsb/bsb_read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/bsb/bsbdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ceos2/ceos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/ceos2/ceosrecipe.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/ceos2/ceossar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/ceos2/link.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/ceos2/sar_ceosdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ceos/ceosdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ceos/ceosopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/ceos/ceostest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/coasp/coasp_dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/cosar/cosar_dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ctg/ctgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/dimap/dimapdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/dods/dodsdataset2.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/dted/dted_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/dted/dted_create.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/dted/dted_ptstream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/dted/dted_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/dted/dteddataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/e00grid/e00griddataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/e00grid/e00read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/ecw/ecwasyncreader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ecw/ecwcreatecopy.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ecw/ecwdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ecw/jp2userbox.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/elas/elasdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/envisat/EnvisatFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/envisat/dumpgeo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/envisat/envisat_dump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/envisat/envisatdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/envisat/records.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/epsilon/epsilondataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ers/ersdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ers/ershdrnode.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/fit/fit.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/fit/fitdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/fits/fitsdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gdalallregister.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/georaster/georaster_dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/georaster/georaster_rasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/georaster/georaster_wrapper.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/georaster/oci_wrapper.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gff/gff_dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gif/biggifdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gif/gifabstractdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gif/gifdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gif/giflib/dgif_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gif/giflib/egif_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gif/giflib/gif_err.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gif/giflib/gif_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gif/giflib/gifalloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grass/grass57dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grass/grassdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/clock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/degrib1.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/degrib2.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/engribapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/filedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/fileendian.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/grib1tab.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/grib2api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/inventory.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/memendian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/memorydatasource.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/metaname.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/metaparse.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/metaprint.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/myassert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/myerror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/myutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/tdlpack.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/degrib/weather.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/cmplxpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/compack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/comunpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/dec_jpeg2000.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/dec_png.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/drstemplates.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/enc_jpeg2000.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/enc_png.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_addfield.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_addgrid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_addlocal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_create.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_free.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_getfld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_gribend.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_miss.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/g2_unpack7.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/gbits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/getdim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/getpoly.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/gridtemplates.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/int_power.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/jpcpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/jpcunpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/misspack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/mkieee.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/pack_gp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/pdstemplates.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/pngpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/pngunpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/rdieee.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/reduce.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/seekgb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/simpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/simunpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/specpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/degrib18/g2clib-1.0.4/specunpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/grib/gribdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gsg/gs7bgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gsg/gsagdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gsg/gsbgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gta/gtadataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gtiff/geotiff.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gtiff/gt_citation.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gtiff/gt_overview.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gtiff/gt_wkt_srs.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_extra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_free.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_get.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_names.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_new.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_normalize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_simpletags.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_tiffp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_trans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geo_write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/geotiff_proj4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libgeotiff/xtiff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_aux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_close.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_codec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_color.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_dir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_dirinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_dirread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_dirwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_dumpmode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_extension.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_fax3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_fax3sm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_flush.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_getimage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_jpeg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_jpeg_12.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_luv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_lzma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_lzw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_next.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_ojpeg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_open.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_packbits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_pixarlog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_predict.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_strip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_swab.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_thunder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_tile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_vsi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_warning.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/libtiff/tif_zip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/tif_float.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gtiff/tifvsi.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gxf/gxf_ogcwkt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gxf/gxf_proj4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/gxf/gxfdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/gxf/gxfopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/hdf4/hdf-eos/EHapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/hdf4/hdf-eos/GDapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/hdf4/hdf-eos/SWapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/hdf4/hdf-eos/gctp_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/hdf4/hdf4dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hdf4/hdf4imagedataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hdf5/bagdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hdf5/gh5_convenience.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hdf5/hdf5dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hdf5/hdf5imagedataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hdf5/iso19115_srs.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hf2/hf2dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfa_overviews.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfaband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfacompress.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfadataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfadictionary.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfaentry.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfafield.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfaopen.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfatest.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/hfa/hfatype.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/idrisi/IdrisiDataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ilwis/ilwiscoordinatesystem.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ilwis/ilwisdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ingr/IngrTypes.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ingr/IntergraphBand.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ingr/IntergraphDataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ingr/JpegHelper.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/8211dump.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/8211view.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/ddffield.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/ddffielddefn.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/ddfmodule.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/ddfrecord.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/ddfsubfielddefn.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/ddfutils.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/mkcatalog.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/iso8211/timetest.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jaxapalsar/jaxapalsardataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jdem/jdemdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jp2kak/jp2kakdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpeg2000/jpeg2000_vsil_io.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpeg2000/jpeg2000dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpeg/jpgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpeg/jpgdataset_12.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcapimin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcapistd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jccoefct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jccolor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcdctmgr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jchuff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcinit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcmainct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcmarker.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcmaster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcomapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcparam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcphuff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcprepct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jcsample.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jctrans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdapimin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdapistd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdatadst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdatasrc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdcoefct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdcolor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jddctmgr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdhuff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdinput.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdmainct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdmarker.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdmaster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdmerge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdphuff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdpostct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdsample.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jdtrans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jerror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jfdctflt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jfdctfst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jfdctint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jidctflt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jidctfst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jidctint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jidctred.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jmemansi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jmemmgr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jquant1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jquant2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/libjpeg/jutils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/jpeg/vsidataio.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpegls/jpeglsdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/jpipkak/jpipkakdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/kmlsuperoverlay/kmlsuperoverlaydataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/l1b/l1bdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/leveller/levellerdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/mem/memdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/mrsid/mrsiddataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/mrsid/mrsidstream.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/mrsid_lidar/gdal_MG4Lidar.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msg/msgcommand.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msg/msgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msg/prologue.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msg/reflectancecalculator.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msg/xritheaderparser.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msgn/msg_basic_types.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msgn/msg_reader_core.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/msgn/msgndataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/netcdf/gmtdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/netcdf/netcdfdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ngsgeoid/ngsgeoiddataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/ecrgtocdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/mgrs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitf_gcprpc.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfaridpcm.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfbilevel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfdes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfdump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitffile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfimage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfwritejpeg.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/nitfwritejpeg_12.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/rpftocdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/nitf/rpftocfile.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/northwood/grcdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/northwood/grddataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/northwood/northwood.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ogdi/ogdidataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/openjpeg/openjpegdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/ozi/ozidataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/gdal_edb.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/pcidskdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/pcidskdataset2.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/pcidsktiledrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/channel/cbandinterleavedchannel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/channel/cexternalchannel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/channel/cpcidskchannel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/channel/cpixelinterleavedchannel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/channel/ctiledchannel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/clinksegment.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/cpcidskfile.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/edb_pcidsk.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/libjpeg_io.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/metadataset_p.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidsk_pubutils.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidsk_utils.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidskbuffer.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidskcreate.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidskexception.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidskinterfaces.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/pcidskopen.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/core/sysvirtualfile.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/port/io_stdio.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/port/io_win32.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/port/pthread_mutex.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/port/win32_mutex.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidsk_array.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidsk_tex.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskads40model.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskapmodel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskbinarysegment.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskbitmap.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskephemerissegment.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskgcp2segment.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskgeoref.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskpct.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskrpcmodel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidsksegment.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidsktoutinmodel.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskvectorsegment.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/cpcidskvectorsegment_consistencycheck.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/metadatasegment_p.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/sysblockmap.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/vecsegdataindex.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/sdk/segment/vecsegheader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcidsk/vsi_pcidsk_io.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/_getcell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/_getrow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/_gsomece.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/_putcell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/_rputrow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/angle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/attravai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/attrsize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/cellsize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/create2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/csfglob.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/csfsup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/delattr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/dumconv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/endian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/filename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gattrblk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gattridx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gcellrep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gdattype.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/getattr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/getx0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gety0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/ggisfid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gmaxval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gminval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gnrcols.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gnrrows.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gproj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gputproj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gvalscal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gvartype.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/gversion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/ismv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/kernlcsf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/legend.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/mclose.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/mopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/moreattr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/mperror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/pgisfid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/pmaxval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/pminval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/putallmv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/putattr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/putsomec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/putx0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/puty0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/pvalscal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rattrblk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rcomp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rcoords.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rdup2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/reseterr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rextend.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rmalloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/rrowcol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/ruseas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/setangle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/setmv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/setvtmv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/strconst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/strpad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/swapio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/trackmm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/vs2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/vsdef.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/vsis.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/vsvers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/libcsf/wattrblk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/pcraster/pcrasterdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcraster/pcrastermisc.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcraster/pcrasterrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pcraster/pcrasterutil.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pdf/pdfdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pdf/pdfio.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pdf/pdfobject.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pds/isis2dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pds/isis3dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pds/nasakeywordhandler.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pds/pdsdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pgchip/pgchipdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pgchip/pgchiprasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/pgchip/pgchiputilities.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/png.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngerror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pnggccrd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngget.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngmem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngpread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngrio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngrtran.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngrutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngtrans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngvcrd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngwio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngwtran.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/libpng/pngwutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/png/pngdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/postgisraster/postgisrasterdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/postgisraster/postgisrasterdriver.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/postgisraster/postgisrasterrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/r/rcreatecopy.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/r/rdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rasdaman/rasdamandataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rasterlite/rasterlitecreatecopy.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rasterlite/rasterlitedataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rasterlite/rasterliteoverviews.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/ace2dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/atlsci_spheroid.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/btdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/cpgdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/dipxdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/doq1dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/doq2dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/ehdrdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/eirdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/envidataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/fastdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/fujibasdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/genbindataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/gscdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/gtxdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/hkvdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/idadataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/landataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/lcpdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/loslasdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/mffdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/ndfdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/ntv2dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/pauxdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/pnmdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/rawdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/raw/snodasdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rik/rikdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rmf/rmfdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rmf/rmfdem.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rmf/rmflzw.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/rs2/rs2dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/saga/sagadataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sde/sdedataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sde/sdeerror.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sde/sderasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdts2shp.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtsattrreader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtscatd.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtsdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtsindexedreader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtsiref.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtslib.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtslinereader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtspointreader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtspolygonreader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtsrasterreader.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtstransfer.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sdts/sdtsxref.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/sgi/sgidataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/srtmhgt/srtmhgtdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/terragen/terragendataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/til/tildataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/tsx/tsxdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/usgsdem/usgsdem_create.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/usgsdem/usgsdemdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtderivedrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtdriver.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtfilters.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtrawrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtsourcedrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtsources.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/vrt/vrtwarped.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wcs/httpdriver.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wcs/wcsdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/webp/webpdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/cache.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/dataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/gdalhttp.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/md5.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver_tiled_wms.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver_tileservice.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver_tms.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver_virtualearth.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver_wms.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/minidriver_worldwind.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/rasterband.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/stuff.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/wmsdriver.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/wms/wmsmetadataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/xpm/xpmdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/xyz/xyzdataset.cpp" />
+		<Unit filename="gdal-1.9.2/frmts/zlib/adler32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/deflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/gzio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/infback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/inffast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/inflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/inftrees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/trees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/uncompr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zlib/zutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/frmts/zmap/zmapdataset.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdal_misc.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdal_rat.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdal_rpcimdio.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalallvalidmaskband.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalcolortable.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaldataset.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaldefaultasync.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaldefaultoverviews.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaldllmain.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaldriver.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaldrivermanager.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalgmlcoverage.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaljp2box.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdaljp2metadata.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalmajorobject.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalmultidomainmetadata.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalnodatamaskband.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalnodatavaluesmaskband.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalopeninfo.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalpamdataset.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalpamproxydb.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalpamrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalproxydataset.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalproxypool.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalrasterband.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/gdalrasterblock.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/overview.cpp" />
+		<Unit filename="gdal-1.9.2/gcore/rasterio.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/gml2ogrgeometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr2gmlgeometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_api.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_api.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_capi_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogr_core.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_expat.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_expat.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_feature.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_featurestyle.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_fromepsg.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_geometry.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_geos.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_opt.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_p.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_spatialref.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_api.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_dict.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_erm.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_esri.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_esri_names.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_ozi.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_panorama.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_pci.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_proj4.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_usgs.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_validate.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srs_xml.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogr_srsnode.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ograssemblepolygon.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrct.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrcurve.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrfeature.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrfeaturedefn.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrfeaturequery.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrfeaturestyle.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrfielddefn.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrgeomediageometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrgeomediageometry.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrgeometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrgeometrycollection.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrgeometryfactory.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrlinearring.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrlinestring.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrmultilinestring.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrmultipoint.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrmultipolygon.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrpgeogeometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrpgeogeometry.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrpoint.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrpolygon.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/aeronavfaa/ogr_aeronavfaa.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/aeronavfaa/ograeronavfaadatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/aeronavfaa/ograeronavfaadriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/aeronavfaa/ograeronavfaalayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcgen/ogr_arcgen.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcgen/ograrcgendatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcgen/ograrcgendriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcgen/ograrcgenlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcobjects/aodatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcobjects/aodriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcobjects/aolayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcobjects/aoutils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcobjects/aoutils.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/arcobjects/ogr_ao.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_bin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_binwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_e00gen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_e00parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_e00read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_e00write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_mbyte.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_mbyte.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/avc_rawbin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/dbfopen.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogr_avc.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravcbindatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravcbindriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravcbinlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravcdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravce00datasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravce00driver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravce00layer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/avc/ogravclayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/bna/ogr_bna.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/bna/ogrbnadatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/bna/ogrbnadriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/bna/ogrbnalayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/bna/ogrbnaparser.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/bna/ogrbnaparser.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/couchdb/ogr_couchdb.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/couchdb/ogrcouchdbdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/couchdb/ogrcouchdbdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/couchdb/ogrcouchdblayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/couchdb/ogrcouchdbrowslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/couchdb/ogrcouchdbtablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/csv/ogr_csv.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/csv/ogrcsvdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/csv/ogrcsvdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/csv/ogrcsvlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgndump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnfloat.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnhelp.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnlib.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnlibp.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnopen.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnread.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnstroke.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnwrite.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dgnwritetest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/dist/cpl_config.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/ogr_dgn.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/ogrdgndatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/ogrdgndriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dgn/ogrdgnlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogr_dods.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogrdodsdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogrdodsdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogrdodsfielddefn.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogrdodsgrid.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogrdodslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dods/ogrdodssequencelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogr_dwg.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwg_blockmap.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwg_dimension.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwg_hatch.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwgblockslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwgdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwgdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dwg/ogrdwglayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/intronurbs.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogr_autocad_services.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogr_autocad_services.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogr_dxf.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxf_blockmap.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxf_dimension.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxf_hatch.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxf_polyline_smooth.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxf_polyline_smooth.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfblockslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfblockswriterlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxflayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfreader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/dxf/ogrdxfwriterlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/edigeo/ogr_edigeo.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/edigeo/ogredigeodatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/edigeo/ogredigeodriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/edigeo/ogredigeolayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/filegdb/FGdbDatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/filegdb/FGdbDriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/filegdb/FGdbLayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/filegdb/FGdbUtils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/filegdb/FGdbUtils.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/filegdb/ogr_fgdb.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/fme2ogr.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/fme2ogr_utils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/ogrfmecacheindex.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/ogrfmedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/ogrfmedriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/ogrfmelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/ogrfmelayercached.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/fme/ogrfmelayerdb.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogr_attrind.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogr_gensql.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogr_gensql.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogr_miattrind.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogrdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogrlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogrregisterall.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogrsfdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/generic/ogrsfdriverregistrar.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/geoconcept.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/geoconcept.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/geoconcept_syscoord.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/geoconcept_syscoord.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/ogrgeoconceptdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/ogrgeoconceptdatasource.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/ogrgeoconceptdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/ogrgeoconceptdriver.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/ogrgeoconceptlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geoconcept/ogrgeoconceptlayer.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/arraylist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/arraylist.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/bits.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/config.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/debug.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_object.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_object.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_object_private.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_tokener.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_tokener.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/json_util.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/linkhash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/linkhash.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/printbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/jsonc/printbuf.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogr_geojson.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogresrijsonreader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsondatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsondriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonreader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonutils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonutils.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonwriter.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geojson/ogrgeojsonwriter.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geomedia/ogr_geomedia.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geomedia/ogrgeomediadatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geomedia/ogrgeomediadriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geomedia/ogrgeomedialayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geomedia/ogrgeomediaselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/geomedia/ogrgeomediatablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/georss/ogr_georss.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/georss/ogrgeorssdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/georss/ogrgeorssdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/georss/ogrgeorsslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gft/ogr_gft.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gft/ogrgftdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gft/ogrgftdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gft/ogrgftlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gft/ogrgftresultlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gft/ogrgfttablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gfstemplate.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlfeature.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlfeatureclass.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlhandler.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlpropertydefn.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlreader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlreader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlreaderp.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlreadstate.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlutils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/gmlutils.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/hugefileresolver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/ogr_gml.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/ogrgmldatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/ogrgmldriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/ogrgmllayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/parsexsd.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/parsexsd.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/resolvexlinks.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gml/trstring.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gmt/ogr_gmt.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gmt/ogrgmtdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gmt/ogrgmtdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpsbabel/ogr_gpsbabel.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpsbabel/ogrgpsbabeldatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpsbabel/ogrgpsbabeldriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpsbabel/ogrgpsbabelfork.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpsbabel/ogrgpsbabelwritedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpx/ogr_gpx.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpx/ogrgpxdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpx/ogrgpxdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gpx/ogrgpxlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/grass/ogrgrass.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/grass/ogrgrassdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/grass/ogrgrassdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/grass/ogrgrasslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/gtm.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/gtm.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/gtmtracklayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/gtmwaypointlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/ogr_gtm.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/ogrgtmdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/ogrgtmdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/gtm/ogrgtmlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/htf/ogr_htf.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/htf/ogrhtfdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/htf/ogrhtfdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/htf/ogrhtflayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idb/ogr_idb.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idb/ogridbdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idb/ogridbdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idb/ogridblayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idb/ogridbselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idb/ogridbtablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idrisi/generate_test_files.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idrisi/ogr_idrisi.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idrisi/ogridrisidatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idrisi/ogridrisidriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/idrisi/ogridrisilayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili1reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili1reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili1readerp.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili2handler.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili2reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili2reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ili2readerp.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ilihelper.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ilihelper.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_attr.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_basket.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_error.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_file.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_iterator.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_object.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_p.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_utilities.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/iom_value.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/tags.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/ustrings.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iom/writer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iomhelper.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/iomhelper.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogr_ili1.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogr_ili2.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogrili1datasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogrili1driver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogrili1layer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogrili2datasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogrili2driver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ili/ogrili2layer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogr_ingres.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogringresdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogringresdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogringreslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogringresresultlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogringresstatement.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ingres/ogringrestablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kml.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kml.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kmlnode.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kmlnode.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kmlutility.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kmlvector.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/kmlvector.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/ogr2kmlgeometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/ogr_kml.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/ogrkmldatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/ogrkmldriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/kml/ogrkmllayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogr_libkml.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmldatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmldriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlfeature.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlfeature.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlfeaturestyle.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlfeaturestyle.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlfield.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlfield.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlgeometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlgeometry.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmllayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlstyle.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/libkml/ogrlibkmlstyle.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mdb/ogr_mdb.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mdb/ogrmdbdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mdb/ogrmdbdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mdb/ogrmdbjackcess.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mdb/ogrmdblayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mem/ogr_mem.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mem/ogrmemdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mem/ogrmemdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mem/ogrmemlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_bounds.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_coordsys.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_datfile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_feature.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_feature_mif.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_geometry.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_geometry.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_idfile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_imapinfofile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_indfile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_mapcoordblock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_mapfile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_mapheaderblock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_mapindexblock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_mapobjectblock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_maptoolblock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_middatafile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_miffile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_ogr_datasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_ogr_driver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_ogr_driver.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_priv.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_rawbinblock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_tabfile.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_tabseamless.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_tabview.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_tooldef.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_utils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mitab/mitab_utils.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogr_mssqlspatial.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlgeometryparser.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlgeometryvalidator.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlspatialdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlspatialdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlspatiallayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlspatialselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mssqlspatial/ogrmssqlspatialtablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mysql/ogr_mysql.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mysql/ogrmysqldatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mysql/ogrmysqldriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mysql/ogrmysqllayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mysql/ogrmysqlresultlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/mysql/ogrmysqltablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/nashandler.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/nasreader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/nasreaderp.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/ogr_nas.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/ogrnasdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/ogrnasdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/ogrnaslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/nas/ogrnasrelationlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntf.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntf_codelist.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntf_estlayers.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntf_generic.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntf_raster.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntfdump.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntffilereader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntfrecord.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ntfstroke.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ogrntfdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ogrntfdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ogrntffeatureclasslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ntf/ogrntflayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/fastload.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/oci_utils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ocitest.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogr_oci.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocidatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocidriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocilayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrociloaderlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrociselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocisession.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocistatement.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocistringbuf.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocistroke.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrocitablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/oci/ogrociwritablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/odbc/ogr_odbc.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/odbc/ogrodbcdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/odbc/ogrodbcdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/odbc/ogrodbclayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/odbc/ogrodbcselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/odbc/ogrodbctablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ogdi/ogrogdi.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ogdi/ogrogdidatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ogdi/ogrogdidriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ogdi/ogrogdilayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ogr_attrind.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/ogrsf_frmts.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/openair/ogr_openair.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/openair/ogropenairdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/openair/ogropenairdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/openair/ogropenairlabellayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/openair/ogropenairlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pcidsk/ogr_pcidsk.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pcidsk/ogrpcidskdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pcidsk/ogrpcidskdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pcidsk/ogrpcidsklayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pds/ogr_pds.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pds/ogrpdsdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pds/ogrpdsdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pds/ogrpdslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogr_pg.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpgdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpgdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpglayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpgresultlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpgtablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpgutility.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pg/ogrpgutility.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgdump/ogr_pgdump.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgdump/ogrpgdumpdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgdump/ogrpgdumpdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgdump/ogrpgdumplayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgeo/ogr_pgeo.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgeo/ogrpgeodatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgeo/ogrpgeodriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgeo/ogrpgeolayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgeo/ogrpgeoselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/pgeo/ogrpgeotablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/rec/ll_recio.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/rec/ogr_rec.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/rec/ogrrecdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/rec/ogrrecdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/rec/ogrreclayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/ddfrecordindex.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/ogr_s57.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/ogrs57datasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/ogrs57driver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/ogrs57layer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57classregistrar.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57dump.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57featuredefns.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57filecollector.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57tables.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/s57/s57writer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sde/ogr_sde.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sde/ogrsdedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sde/ogrsdedriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sde/ogrsdelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sdts/ogr_sdts.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sdts/ogrsdtsdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sdts/ogrsdtsdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sdts/ogrsdtslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segukooa/ogr_segukooa.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segukooa/ogrsegukooadatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segukooa/ogrsegukooadriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segukooa/ogrsegukooalayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segy/ogr_segy.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segy/ogrsegydatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segy/ogrsegydriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/segy/ogrsegylayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/dbfopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/ogrshape.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/ogrshapedriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/ogrshapelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/shape2ogr.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/shapefil.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/shp_vsi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/shpopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/shape/shptree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sosi/fyba_melding.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sosi/ogr_sosi.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sosi/ogrsosidatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sosi/ogrsosidriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sosi/ogrsosilayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogr_sqlite.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqlitedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqlitedriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqlitelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqliteselectlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqlitesinglefeaturelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqlitetablelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqlitevfs.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sqlite/ogrsqliteviewlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sua/ogr_sua.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sua/ogrsuadatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sua/ogrsuadriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/sua/ogrsualayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/svg/ogr_svg.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/svg/ogrsvgdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/svg/ogrsvgdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/svg/ogrsvglayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/ogr_tiger.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/ogrtigerdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/ogrtigerdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/ogrtigerlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigeraltname.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerarealandmarks.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigercompletechain.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerentitynames.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerfeatureids.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerfilebase.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigeridhistory.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerinfo.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerkeyfeatures.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerlandmarks.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigeroverunder.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerpip.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerpoint.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerpolychainlink.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerpolygon.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerpolygoncorrections.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerpolygoneconomic.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerspatialmetadata.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigertlidrange.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerzerocellid.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerzipcodes.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/tiger/tigerzipplus4.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/ogr_vfk.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/ogrvfkdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/ogrvfkdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/ogrvfklayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkdatablock.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkfeature.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkproperty.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkpropertydefn.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkreader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkreader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vfk/vfkreaderp.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vrt/ogr_vrt.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vrt/ogrvrtdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vrt/ogrvrtdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/vrt/ogrvrtlayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/wfs/ogr_wfs.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/wfs/ogrwfsdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/wfs/ogrwfsdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/wfs/ogrwfsfilter.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/wfs/ogrwfslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xls/ogr_xls.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xls/ogrxlsdatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xls/ogrxlsdriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xls/ogrxlslayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_apt_reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_apt_reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_awy_reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_awy_reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_fix_reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_fix_reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_geo_utils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_geo_utils.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_nav_reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_nav_reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_reader.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogr_xplane_reader.h" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogrxplanedatasource.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogrxplanedriver.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/ogrxplanelayer.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsf_frmts/xplane/test_geo_utils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrspatialreference.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrsurface.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/ogrutils.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq.h" />
+		<Unit filename="gdal-1.9.2/ogr/swq_expr_node.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq_op_general.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq_op_registrar.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq_parser.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq_parser.hpp" />
+		<Unit filename="gdal-1.9.2/ogr/swq_select.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/wcts/ogrwcts.cpp" />
+		<Unit filename="gdal-1.9.2/ogr/wcts/wctsclient.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_atomic_ops.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_base64.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_conv.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_csv.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_error.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_findfile.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_getexecpath.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_hash_set.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_http.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_list.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_minixml.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_minizip_ioapi.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_minizip_unzip.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_minizip_zip.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_multiproc.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_odbc.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_path.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_quad_tree.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_recode.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_recode_iconv.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_recode_stub.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_string.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_strtod.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_time.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsi_mem.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_abstract_archive.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_buffered_reader.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_cache.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_curl.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_gzip.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_simple.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_sparsefile.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_stdin.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_stdout.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_subfile.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_tar.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_unix_stdio_64.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsil_win32.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_vsisimple.cpp" />
+		<Unit filename="gdal-1.9.2/port/cpl_win32ce_api.cpp" />
+		<Unit filename="gdal-1.9.2/port/cplgetsymbol.cpp" />
+		<Unit filename="gdal-1.9.2/port/cplkeywordparser.cpp" />
+		<Unit filename="gdal-1.9.2/port/cplstring.cpp" />
+		<Unit filename="gdal-1.9.2/port/cplstringlist.cpp" />
+		<Unit filename="gdal-1.9.2/port/xmlreformat.cpp" />
+		<Unit filename="gdal-1.9.2/swig/csharp/const/gdalconst_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/swig/csharp/gdal/gdal_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/csharp/ogr/ogr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/csharp/ogr/osr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/csharp/osr/osr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/java/add_javadoc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/swig/perl/gdal_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/perl/gdalconst_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/swig/perl/ogr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/perl/osr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/php/gdal_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/php/gdalconst_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/swig/php/ogr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/php/osr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/python/extensions/gdal_array_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/python/extensions/gdal_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/python/extensions/gdalconst_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdal-1.9.2/swig/python/extensions/ogr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/swig/python/extensions/osr_wrap.cpp" />
+		<Unit filename="gdal-1.9.2/vb6/vb6_support.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
