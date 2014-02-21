@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1392910554 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
+1392912417 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
 	<iostream>
 	"ogrsf_frmts.h"
 
