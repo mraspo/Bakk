@@ -30,14 +30,18 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-fexceptions" />
+			<Add directory="C:/warmerda/bld/include" />
 		</Compiler>
+		<Linker>
+			<Add library="C:\warmerda\bld\lib\gdal_i.lib" />
+			<Add directory="C:/warmerda/bld/lib" />
+		</Linker>
 		<Unit filename="main.cpp" />
-		<Unit filename="shapefile/points.cpg" />
-		<Unit filename="shapefile/points.dbf" />
-		<Unit filename="shapefile/points.prj" />
-		<Unit filename="shapefile/points.shp" />
-		<Unit filename="shapefile/points.shx" />
+		<Unit filename="points.cpg" />
+		<Unit filename="points.dbf" />
+		<Unit filename="points.prj" />
+		<Unit filename="points.shp" />
+		<Unit filename="points.shx" />
 		<Extensions>
 			<code_completion />
 			<envvars />
