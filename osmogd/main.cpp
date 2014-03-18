@@ -6,10 +6,14 @@
 *Department:    Geoinformation
 *Semester:      WS/SS 2013/14
 */
+//YCFHQ-9DWCY-DKV88-T2TMH-G7BHP
 
 #include <iostream>
 #include "ogr_api.h"
 #include "ogr_spatialref.h"
+#include "getShape.h"
+#include "getLayerName.h"
+//#include "geos_c.h"
 
 
 using namespace std;
@@ -17,179 +21,108 @@ using namespace std;
 
 int main()
 {
-    /*
+
     //reading from shapefile
 
     //register all format drivers built into GDAL/OGR -logrsf_frmts, -fexceptions -logrsf_frmts
     OGRRegisterAll();
 
     //input OGR datasource
-    OGRDataSourceH hDS;
+    OGRDataSourceH hDS_1;
+    OGRDataSourceH hDS_2;
 
     //layer of OGR datasource
-    OGRLayerH hLayer;
+    OGRLayerH hLayer_1;
+    OGRLayerH hLayer_2;
 
     //features from layer
-    OGRFeatureH hFeature;
+    OGRFeatureH hFeature_1;
+    OGRFeatureH hFeature_2;
 
-    int iField;
+    int iCounter = 1;
+    int iLength = 0;
+    double d;
+
+    char* shapename1;
+    char* shapename2;
+    char* lName1;
+    char* lName2;
+
+    shapename1 = shapeIn(iCounter++);
+    shapename2 = shapeIn(iCounter);
 
     //open shapefile
-    hDS = OGROpen( "points.shp", FALSE, NULL ); //FALSE: no update access
+    hDS_1 = OGROpen(shapename1, FALSE, NULL); //FALSE: no update access
+    hDS_2 = OGROpen(shapename2, FALSE, NULL);
 
     //check if opening shapefile failed
-    if( hDS == NULL )
+    if( hDS_1 == NULL || hDS_2 == NULL)
     {
         printf( "Open failed.\n" );
         exit( 1 );
     }
 
+    lName1 = layerName(shapename1);
+    lName2 = layerName(shapename2);
+
     //get the layer, shown in QuantumGIS
-    hLayer = OGR_DS_GetLayerByName( hDS, "points" );
+    hLayer_1 = OGR_DS_GetLayerByName(hDS_1, lName1);
+    hLayer_2 = OGR_DS_GetLayerByName(hDS_2, lName2);
 
     //to start at beginning of the layer
-    OGR_L_ResetReading(hLayer);
+    OGR_L_ResetReading(hLayer_1);
 
-    //iterate through all features in the layer
-    while( (hFeature = OGR_L_GetNextFeature(hLayer)) != NULL )
+    OGRGeometryH hGeometry_1;
+    OGRGeometryH hGeometry_2;
+
+    while( (hFeature_1 = OGR_L_GetNextFeature(hLayer_1)) != NULL)
     {
-        //to dump all the attribute fields of the feature
-        OGRFeatureDefnH hFDefn = OGR_L_GetLayerDefn(hLayer);
-
-        //loop over all fields, fetch and report the attributes based on their type
-        for( iField = 0; iField < OGR_FD_GetFieldCount(hFDefn); iField++ )
-        {
-            OGRFieldDefnH hFieldDefn = OGR_FD_GetFieldDefn( hFDefn, iField );
-
-            if( OGR_Fld_GetType(hFieldDefn) == OFTInteger )
-                //printf( "%d,", OGR_F_GetFieldAsInteger( hFeature, iField ) );
-                cout << OGR_F_GetFieldAsInteger( hFeature, iField ) << endl;
-            else if( OGR_Fld_GetType(hFieldDefn) == OFTReal )
-                //printf( "%.3f,", OGR_F_GetFieldAsDouble( hFeature, iField) );
-                cout << OGR_F_GetFieldAsDouble( hFeature, iField ) << endl;
-            else if( OGR_Fld_GetType(hFieldDefn) == OFTString )
-                //printf( "%s,", OGR_F_GetFieldAsString( hFeature, iField) );
-                cout << OGR_F_GetFieldAsString( hFeature, iField ) << endl;
-            else
-                //printf( "%s,", OGR_F_GetFieldAsString( hFeature, iField) );
-                cout << OGR_F_GetFieldAsString( hFeature, iField ) << endl;
-
-            //GetFieldAsString wäre für alle Typen möglich, würde die Sache verkürzen
-        }
-
         //geometry from feature
-        OGRGeometryH hGeometry;
+        hGeometry_1 = OGR_F_GetGeometryRef(hFeature_1);
+        OGR_L_ResetReading(hLayer_2);
 
-        hGeometry = OGR_F_GetGeometryRef(hFeature);
+        while((hFeature_2 = OGR_L_GetNextFeature(hLayer_2)) != NULL)
+        {
+            //geometry from feature
+            hGeometry_2 = OGR_F_GetGeometryRef(hFeature_2);
+
+            if(hGeometry_1 != NULL && hGeometry_2 != NULL && wkbFlatten(OGR_G_GetGeometryType(hGeometry_1))== wkbPoint && wkbFlatten(OGR_G_GetGeometryType(hGeometry_2))== wkbPoint)
+            {
+                //puffer fehlt noch!!
+                cout << OGR_G_Buffer(hGeometry_1, 1, 30) << endl;
+
+                if(OGR_G_GetX(hGeometry_1, 0) == OGR_G_GetX(hGeometry_2, 0) && OGR_G_GetY(hGeometry_1, 0) == OGR_G_GetY(hGeometry_2, 0))
+                {
+                    cout << "equal" << endl;
+                }
+                //{
+                    //OGR_G_GetX(hGeometry, 0), OGR_G_GetY(hGeometry, 0)
+                    //d = OGR_G_GetX(hGeometry_1, 0);
+                    //cout << d << endl;
+                //}
+            }
+            else
+            {
+                cout << "no point geometry" << endl;
+            }
+
+
+        /*
 
         //if its a point print it
         if( hGeometry != NULL && wkbFlatten(OGR_G_GetGeometryType(hGeometry)) == wkbPoint )
         {
             printf( "%.7f,%.7f\n", OGR_G_GetX(hGeometry, 0), OGR_G_GetY(hGeometry, 0) );
         }
-        else
-        {
-            //printf( "no point geometry\n" );
-            cout << "no point geometry" << endl;
-        }
-        OGR_F_Destroy( hFeature );
-
-
-    }
-    OGR_DS_Destroy( hDS );
-    */
-
-
-
-    //reading from and writing to shapefile
-
-    double x, y;
-    char szName[33];
-
-    //shapefile driver
-    const char *pszDriverName = "ESRI Shapefile";
-    OGRSFDriverH hDriver;
-
-    OGRRegisterAll();
-
-    hDriver = OGRGetDriverByName( pszDriverName );
-    if( hDriver == NULL )
-    {
-        printf( "%s driver not available.\n", pszDriverName );
-        exit( 1 );
-    }
-
-    //create shapefile
-    OGRDataSourceH hDS;
-
-    hDS = OGR_Dr_CreateDataSource( hDriver, "point_out.shp", NULL );
-    if( hDS == NULL )
-    {
-        printf( "Creation of output file failed.\n" );
-        exit( 1 );
-    }
-
-    //create layer, point, no reference system information
-    OGRLayerH hLayer;
-
-    OGRSpatialReference oSRS;
-
-    oSRS.SetWellKnownGeogCS( "WGS84" );
-//SRS_PT_CYLINDRICAL_EQUAL_AREA
-
-//(OGRSpatialReferenceH *) oSRS SRS_DN_WGS84
-    hLayer = OGR_DS_CreateLayer( hDS, "point_out", (OGRSpatialReferenceH *) oSRS , wkbPoint, NULL );
-    if( hLayer == NULL )
-    {
-        printf( "Layer creation failed.\n" );
-        exit( 1 );
-    }
-
-    //create field
-    OGRFieldDefnH hFieldDefn;
-
-    hFieldDefn = OGR_Fld_Create( "Name", OFTString );
-
-    //field width
-    OGR_Fld_SetWidth( hFieldDefn, 254); //32
-
-    if( OGR_L_CreateField( hLayer, hFieldDefn, TRUE ) != OGRERR_NONE )
-    {
-        printf( "Creating Name field failed.\n" );
-        exit( 1 );
-    }
-
-    OGR_Fld_Destroy(hFieldDefn);
-
-    //reading lines of the form "x,y,name" from stdin, and parsing them
-    while( !feof(stdin) && fscanf( stdin, "%lf,%lf,%32s", &x, &y, szName ) == 3 )
-    {
-        //write feature to disk, set attributes and attach geometry before trying to write it to the layer
-        OGRFeatureH hFeature;
-        OGRGeometryH hPt;
-
-        hFeature = OGR_F_Create( OGR_L_GetLayerDefn( hLayer ) );
-        OGR_F_SetFieldString( hFeature, OGR_F_GetFieldIndex(hFeature, "Name"), szName );
-
-        //local geometry object, assign copy to the feature
-        hPt = OGR_G_CreateGeometry(wkbPoint);
-        OGR_G_SetPoint_2D(hPt, 0, x, y);
-
-        OGR_F_SetGeometry( hFeature, hPt );
-        OGR_G_DestroyGeometry(hPt);
-
-        //create feature in the file
-        if( OGR_L_CreateFeature( hLayer, hFeature ) != OGRERR_NONE )
-        {
-           printf( "Failed to create feature in shapefile.\n" );
-           exit( 1 );
+        */
         }
 
-        OGR_F_Destroy( hFeature );
-   }
+    }
+    OGR_F_Destroy(hFeature_1);
+    OGR_F_Destroy(hFeature_2);
 
-   //close down datasource
-   OGR_DS_Destroy( hDS );
+    OGR_DS_Destroy(hDS_1);
+    OGR_DS_Destroy(hDS_2);
 
     return 0;
 }

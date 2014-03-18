@@ -34,8 +34,13 @@
 		</Compiler>
 		<Linker>
 			<Add library="C:\warmerda\bld\lib\gdal_i.lib" />
+			<Add library="C:\warmerda\bld\lib\geos_c.lib" />
 			<Add directory="C:/warmerda/bld/lib" />
 		</Linker>
+		<Unit filename="getLayerName.cpp" />
+		<Unit filename="getLayerName.h" />
+		<Unit filename="getShape.cpp" />
+		<Unit filename="getShape.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="points.cpg" />
 		<Unit filename="points.dbf" />

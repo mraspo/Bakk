@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1394559763 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
+1394979747 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
 	<iostream>
 	"ogr_api.h"
+	"ogr_spatialref.h"
+	"getShape.h"
+	"getLayerName.h"
 
 1263918564 c:\program files (x86)\fwtools2.4.7\include\ogrsf_frmts.h
 	"ogr_feature.h"
@@ -251,5 +254,69 @@
 
 1377514868 c:\warmerda\bld\include\ogr_api.h
 	"cpl_progress.h"
+	"ogr_core.h"
+
+1394726125 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.cpp
+	"getShape.h"
+	<iostream>
+	<string>
+
+1394726127 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.h
+
+1394729561 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.cpp
+	"getLayerName.h"
+	<string>
+
+1394729336 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.h
+
+1377439858 c:\warmerda\bld\include\geos_c.h
+	<stddef.h>
+	<cstddef>
+	<geos/version.h>
+	<geos/export.h>
+
+1377439832 c:\warmerda\bld\include\geos\version.h
+
+1377439832 c:\warmerda\bld\include\geos\export.h
+
+1367413864 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\ogr_api.h
+	"cpl_progress.h"
+	"ogr_core.h"
+
+1367413828 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\cpl_progress.h
+	"cpl_port.h"
+
+1367413828 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\cpl_port.h
+	"cpl_config.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdarg.h>
+	<string.h>
+	<ctype.h>
+	<limits.h>
+	<time.h>
+	<wce_time.h>
+	<wce_errno.h>
+	<errno.h>
+	<locale.h>
+	<direct.h>
+	<strings.h>
+	<dbmalloc.h>
+	<dmalloc.h>
+	<float.h>
+
+1367413828 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\cpl_config.h
+
+1367413864 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\ogr_core.h
+	"cpl_port.h"
+	"gdal_version.h"
+
+1377583402 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\gdal_version.h
+
+1376198056 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\ogr_spatialref.h
+	"ogr_srs_api.h"
+
+1367413862 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\gdal\include\ogr_srs_api.h
 	"ogr_core.h"
 
