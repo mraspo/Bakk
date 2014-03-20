@@ -30,10 +30,16 @@ int main()
     //input OGR datasource
     OGRDataSourceH hDS_1;
     OGRDataSourceH hDS_2;
+    OGRDataSourceH hDS_3;
+    OGRDataSourceH hDS_4;
+    OGRDataSourceH hDS_5;
 
     //layer of OGR datasource
     OGRLayerH hLayer_1;
     OGRLayerH hLayer_2;
+    OGRLayerH hLayer_3;
+    OGRLayerH hLayer_4;
+    OGRLayerH hLayer_5;
 
     //features from layer
     OGRFeatureH hFeature_1;
@@ -41,12 +47,19 @@ int main()
 
     int iCounter = 1;
     int iLength = 0;
+    int iFlag = 0;
     double d;
 
     char* shapename1;
     char* shapename2;
     char* lName1;
     char* lName2;
+
+    const char *pszDriverName = "ESRI Shapefile";
+    OGRSFDriverH hDriver;
+    OGRFieldDefnH hFieldDefn;
+
+
 
     shapename1 = shapeIn(iCounter++);
     shapename2 = shapeIn(iCounter);
@@ -80,6 +93,7 @@ int main()
         //geometry from feature
         hGeometry_1 = OGR_F_GetGeometryRef(hFeature_1);
         OGR_L_ResetReading(hLayer_2);
+        iFlag = 0;
 
         while((hFeature_2 = OGR_L_GetNextFeature(hLayer_2)) != NULL)
         {
@@ -89,32 +103,30 @@ int main()
             if(hGeometry_1 != NULL && hGeometry_2 != NULL && wkbFlatten(OGR_G_GetGeometryType(hGeometry_1))== wkbPoint && wkbFlatten(OGR_G_GetGeometryType(hGeometry_2))== wkbPoint)
             {
                 //puffer fehlt noch!!
-                cout << OGR_G_Buffer(hGeometry_1, 1, 30) << endl;
-
-                if(OGR_G_GetX(hGeometry_1, 0) == OGR_G_GetX(hGeometry_2, 0) && OGR_G_GetY(hGeometry_1, 0) == OGR_G_GetY(hGeometry_2, 0))
+                if(OGR_G_Within(hGeometry_2, OGR_G_Buffer(hGeometry_1, 1, 30)))
                 {
                     cout << "equal" << endl;
+                    iFlag = 1;
+                    //in unverändert schreiben
                 }
-                //{
-                    //OGR_G_GetX(hGeometry, 0), OGR_G_GetY(hGeometry, 0)
-                    //d = OGR_G_GetX(hGeometry_1, 0);
-                    //cout << d << endl;
-                //}
+                else
+                {
+                    //hGeometry2 neu, in hinzugekommen und
+
+                    if(iFlag == 0)
+                    {
+                        //hGeometry1 in gelöscht schreiben
+                    }
+
+                }
+
+
             }
             else
             {
                 cout << "no point geometry" << endl;
             }
 
-
-        /*
-
-        //if its a point print it
-        if( hGeometry != NULL && wkbFlatten(OGR_G_GetGeometryType(hGeometry)) == wkbPoint )
-        {
-            printf( "%.7f,%.7f\n", OGR_G_GetX(hGeometry, 0), OGR_G_GetY(hGeometry, 0) );
-        }
-        */
         }
 
     }

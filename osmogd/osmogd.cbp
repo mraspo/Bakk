@@ -30,12 +30,13 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="C:/warmerda/bld/include" />
+			<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/include" />
 		</Compiler>
 		<Linker>
-			<Add library="C:\warmerda\bld\lib\gdal_i.lib" />
-			<Add library="C:\warmerda\bld\lib\geos_c.lib" />
-			<Add directory="C:/warmerda/bld/lib" />
+			<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\gdal_i.lib" />
+			<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\geos.lib" />
+			<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\geos_c.lib" />
+			<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/lib" />
 		</Linker>
 		<Unit filename="getLayerName.cpp" />
 		<Unit filename="getLayerName.h" />
