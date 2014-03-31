@@ -28,26 +28,29 @@ int main()
     OGRRegisterAll();
 
     //input OGR datasource
-    OGRDataSourceH hDS_1;
-    OGRDataSourceH hDS_2;
-    OGRDataSourceH hDS_3;
-    OGRDataSourceH hDS_4;
+    OGRDataSourceH referenceShape_source;
+    OGRDataSourceH newShape_source;
+    OGRDataSourceH refShape_unique_source;
+    OGRDataSourceH newShape_unique_source;
     OGRDataSourceH hDS_5;
 
     //layer of OGR datasource
-    OGRLayerH hLayer_1;
-    OGRLayerH hLayer_2;
+    OGRLayerH referenceShape_layer;
+    OGRLayerH newShape_layer;
     OGRLayerH hLayer_3;
     OGRLayerH hLayer_4;
     OGRLayerH hLayer_5;
 
     //features from layer
-    OGRFeatureH hFeature_1;
-    OGRFeatureH hFeature_2;
+    OGRFeatureH referenceShape_feature;
+    OGRFeatureH newShape_feature;
 
     int iCounter = 1;
     int iLength = 0;
     int iFlag = 0;
+    int iField;
+    int iField2;
+    int iEqual = 0;
     double d;
 
     char* shapename1;
@@ -60,16 +63,15 @@ int main()
     OGRFieldDefnH hFieldDefn;
 
 
-
     shapename1 = shapeIn(iCounter++);
     shapename2 = shapeIn(iCounter);
 
     //open shapefile
-    hDS_1 = OGROpen(shapename1, FALSE, NULL); //FALSE: no update access
-    hDS_2 = OGROpen(shapename2, FALSE, NULL);
+    referenceShape_source = OGROpen(shapename1, FALSE, NULL); //FALSE: no update access
+    newShape_source = OGROpen(shapename2, FALSE, NULL);
 
     //check if opening shapefile failed
-    if( hDS_1 == NULL || hDS_2 == NULL)
+    if( referenceShape_source == NULL || newShape_source == NULL)
     {
         printf( "Open failed.\n" );
         exit( 1 );
@@ -79,34 +81,75 @@ int main()
     lName2 = layerName(shapename2);
 
     //get the layer, shown in QuantumGIS
-    hLayer_1 = OGR_DS_GetLayerByName(hDS_1, lName1);
-    hLayer_2 = OGR_DS_GetLayerByName(hDS_2, lName2);
+    referenceShape_layer = OGR_DS_GetLayerByName(referenceShape_source, lName1);
+    newShape_layer = OGR_DS_GetLayerByName(newShape_source, lName2);
 
     //to start at beginning of the layer
-    OGR_L_ResetReading(hLayer_1);
+    OGR_L_ResetReading(referenceShape_layer);
 
     OGRGeometryH hGeometry_1;
     OGRGeometryH hGeometry_2;
+    OGRFeatureDefnH hFDefn_reference;
+    OGRFeatureDefnH hFDefn_new;
 
-    while( (hFeature_1 = OGR_L_GetNextFeature(hLayer_1)) != NULL)
+
+    while( (referenceShape_feature = OGR_L_GetNextFeature(referenceShape_layer)) != NULL)
     {
         //geometry from feature
-        hGeometry_1 = OGR_F_GetGeometryRef(hFeature_1);
-        OGR_L_ResetReading(hLayer_2);
+        hGeometry_1 = OGR_F_GetGeometryRef(referenceShape_feature);
+        hFDefn_reference = OGR_L_GetLayerDefn(referenceShape_layer);
+
+        OGR_L_ResetReading(newShape_layer);
         iFlag = 0;
 
-        while((hFeature_2 = OGR_L_GetNextFeature(hLayer_2)) != NULL)
+        while((newShape_feature = OGR_L_GetNextFeature(newShape_layer)) != NULL)
         {
             //geometry from feature
-            hGeometry_2 = OGR_F_GetGeometryRef(hFeature_2);
+            hGeometry_2 = OGR_F_GetGeometryRef(newShape_feature);
+            hFDefn_new = OGR_L_GetLayerDefn(newShape_layer);
 
             if(hGeometry_1 != NULL && hGeometry_2 != NULL && wkbFlatten(OGR_G_GetGeometryType(hGeometry_1))== wkbPoint && wkbFlatten(OGR_G_GetGeometryType(hGeometry_2))== wkbPoint)
             {
                 //puffer fehlt noch!!
                 if(OGR_G_Within(hGeometry_2, OGR_G_Buffer(hGeometry_1, 1, 30)))
                 {
-                    cout << "equal" << endl;
                     iFlag = 1;
+
+                    OGRFieldDefnH hFieldDefn_reference;
+                    OGRFieldDefnH hFieldDefn_new;
+
+                    for( iField = 0; iField < OGR_FD_GetFieldCount(hFDefn_reference); iField++ )
+                    {
+                        hFieldDefn_reference = OGR_FD_GetFieldDefn( hFDefn_reference, iField );
+
+                        for(iField2 = 0; iField2 < OGR_FD_GetFieldCount(hFDefn_new); iField2++)
+                        {
+                            hFieldDefn_new = OGR_FD_GetFieldDefn( hFDefn_new, iField2 );
+
+                            // problem !!
+                            if(!strcmp(OGR_F_GetFieldAsString(referenceShape_feature, iField),OGR_F_GetFieldAsString(newShape_feature, iField2)))
+                            {
+                                iEqual++;
+                                break;
+                            }
+                            else
+                            {
+                                iEqual = 0;
+                                cout << OGR_F_GetFieldAsString(referenceShape_feature, iField) << " " << OGR_F_GetFieldAsString(newShape_feature, iField2) << endl;
+                            }
+                        }
+                    }
+
+
+                    if(OGR_FD_GetFieldCount(hFDefn_reference) == OGR_FD_GetFieldCount(hFDefn_new) && iEqual == OGR_FD_GetFieldCount(hFDefn_reference))
+                    {
+                        //in exaktgleich schreiben
+                        cout << "equal" << endl;
+                    }
+                    else
+                    {
+                        //in gleicheKoordinaten_unterschiedlicheAttribute schreiben
+                    }
                     //in unverändert schreiben
                 }
                 else
@@ -130,11 +173,11 @@ int main()
         }
 
     }
-    OGR_F_Destroy(hFeature_1);
-    OGR_F_Destroy(hFeature_2);
+    OGR_F_Destroy(referenceShape_feature);
+    OGR_F_Destroy(newShape_feature);
 
-    OGR_DS_Destroy(hDS_1);
-    OGR_DS_Destroy(hDS_2);
+    OGR_DS_Destroy(referenceShape_source);
+    OGR_DS_Destroy(newShape_source);
 
     return 0;
 }
