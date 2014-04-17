@@ -51,6 +51,7 @@ int main()
     int iField;
     int iField2;
     int iEqual = 0;
+    int iLoop = 1;
     double d;
 
     char* shapename1;
@@ -93,13 +94,15 @@ int main()
     OGRFeatureDefnH hFDefn_new;
 
 
-    while( (referenceShape_feature = OGR_L_GetNextFeature(referenceShape_layer)) != NULL)
+    while( (referenceShape_feature = OGR_L_GetNextFeature(referenceShape_layer)) != NULL )
     {
+
         //geometry from feature
         hGeometry_1 = OGR_F_GetGeometryRef(referenceShape_feature);
         hFDefn_reference = OGR_L_GetLayerDefn(referenceShape_layer);
 
         OGR_L_ResetReading(newShape_layer);
+        iEqual = 0;
         iFlag = 0;
 
         while((newShape_feature = OGR_L_GetNextFeature(newShape_layer)) != NULL)
@@ -110,7 +113,7 @@ int main()
 
             if(hGeometry_1 != NULL && hGeometry_2 != NULL && wkbFlatten(OGR_G_GetGeometryType(hGeometry_1))== wkbPoint && wkbFlatten(OGR_G_GetGeometryType(hGeometry_2))== wkbPoint)
             {
-                //puffer fehlt noch!!
+
                 if(OGR_G_Within(hGeometry_2, OGR_G_Buffer(hGeometry_1, 1, 30)))
                 {
                     iFlag = 1;
@@ -129,17 +132,14 @@ int main()
                             // problem !!
                             if(!strcmp(OGR_F_GetFieldAsString(referenceShape_feature, iField),OGR_F_GetFieldAsString(newShape_feature, iField2)))
                             {
+                                //utf8 konvertieren
+                                //double für alle zahlen
                                 iEqual++;
                                 break;
                             }
-                            else
-                            {
-                                iEqual = 0;
-                                cout << OGR_F_GetFieldAsString(referenceShape_feature, iField) << " " << OGR_F_GetFieldAsString(newShape_feature, iField2) << endl;
-                            }
+
                         }
                     }
-
 
                     if(OGR_FD_GetFieldCount(hFDefn_reference) == OGR_FD_GetFieldCount(hFDefn_new) && iEqual == OGR_FD_GetFieldCount(hFDefn_reference))
                     {

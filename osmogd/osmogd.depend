@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1394979747 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
+1395773984 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
 	<iostream>
 	"ogr_api.h"
 	"ogr_spatialref.h"
@@ -256,18 +256,18 @@
 	"cpl_progress.h"
 	"ogr_core.h"
 
-1394726125 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.cpp
+1394729725 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.cpp
 	"getShape.h"
 	<iostream>
 	<string>
 
-1394726127 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.h
+1394729727 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.h
 
-1394729561 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.cpp
+1394733161 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.cpp
 	"getLayerName.h"
 	<string>
 
-1394729336 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.h
+1394732936 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.h
 
 1377439858 c:\warmerda\bld\include\geos_c.h
 	<stddef.h>
@@ -361,14 +361,14 @@
 1388082563 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\neuer ordner (2)\include\ogr_srs_api.h
 	"ogr_core.h"
 
-1367410262 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_api.h
+1367413862 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_api.h
 	"cpl_progress.h"
 	"ogr_core.h"
 
-1367410227 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\cpl_progress.h
+1367413827 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\cpl_progress.h
 	"cpl_port.h"
 
-1367410227 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\cpl_port.h
+1367413827 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\cpl_port.h
 	"cpl_config.h"
 	<stdio.h>
 	<stdlib.h>
@@ -388,17 +388,17 @@
 	<dmalloc.h>
 	<float.h>
 
-1367410227 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\cpl_config.h
+1367413827 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\cpl_config.h
 
-1367410262 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_core.h
+1367413862 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_core.h
 	"cpl_port.h"
 	"gdal_version.h"
 
-1377579243 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\gdal_version.h
+1377582843 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\gdal_version.h
 
-1376194171 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_spatialref.h
+1376197771 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_spatialref.h
 	"ogr_srs_api.h"
 
-1367410261 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_srs_api.h
+1367413861 e:\uni\geomatics engineering\bakk-arbeit\github\gdal\32bit\include\ogr_srs_api.h
 	"ogr_core.h"
 
