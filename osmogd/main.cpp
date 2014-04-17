@@ -51,19 +51,71 @@ int main()
     int iField;
     int iField2;
     int iEqual = 0;
-    int iLoop = 1;
+
     double d;
+    double x, y;
 
     char* shapename1;
     char* shapename2;
     char* lName1;
     char* lName2;
 
+    //----create output files
+
     const char *pszDriverName = "ESRI Shapefile";
     OGRSFDriverH hDriver;
-    OGRFieldDefnH hFieldDefn;
+
+    hDriver = OGRGetDriverByName( pszDriverName );
+    if( hDriver == NULL )
+    {
+        printf( "%s Driver not available.\n", pszDriverName );
+        exit( 1 );
+    }
+
+    OGRDataSourceH ref_unique;
+    OGRDataSourceH new_unique;
+    OGRDataSourceH coord_equal;
+    OGRDataSourceH all_equal;
+
+    ref_unique = OGR_Dr_CreateDataSource( hDriver, "reference_unique.shp", NULL );
+    new_unique = OGR_Dr_CreateDataSource( hDriver, "new_unique.shp", NULL );
+    coord_equal = OGR_Dr_CreateDataSource( hDriver, "coordinates_equal.shp", NULL );
+    all_equal = OGR_Dr_CreateDataSource( hDriver, "all_equal.shp", NULL );
+
+    if( ref_unique == NULL || new_unique == NULL || coord_equal == NULL || all_equal == NULL)
+    {
+        printf( "Creation of output file failed.\n" );
+        exit( 1 );
+    }
+
+    OGRLayerH hLayer_ref;
+    OGRLayerH hLayer_new;
+    OGRLayerH hLayer_coord;
+    OGRLayerH hLayer_all;
+
+    hLayer_ref = OGR_DS_CreateLayer( ref_unique, "reference_unique", NULL, wkbPoint, NULL );
+    hLayer_new = OGR_DS_CreateLayer( new_unique, "new_unique", NULL, wkbPoint, NULL );
+    hLayer_coord = OGR_DS_CreateLayer( coord_equal, "coordinates_equal", NULL, wkbPoint, NULL );
+    hLayer_all = OGR_DS_CreateLayer( all_equal, "all_equal", NULL, wkbPoint, NULL );
+
+    if( hLayer_ref == NULL || hLayer_new == NULL || hLayer_coord == NULL || hLayer_all == NULL)
+    {
+        printf( "Layer creation failed.\n" );
+        exit( 1 );
+    }
 
 
+/*
+
+    if( OGR_L_CreateField( hLayer, hFieldDefn, TRUE ) != OGRERR_NONE )
+    {
+        printf( "Creating Name field failed.\n" );
+        exit( 1 );
+    }
+
+    OGR_Fld_Destroy(hFieldDefn);
+    //-------
+*/
     shapename1 = shapeIn(iCounter++);
     shapename2 = shapeIn(iCounter);
 
@@ -85,14 +137,68 @@ int main()
     referenceShape_layer = OGR_DS_GetLayerByName(referenceShape_source, lName1);
     newShape_layer = OGR_DS_GetLayerByName(newShape_source, lName2);
 
-    //to start at beginning of the layer
-    OGR_L_ResetReading(referenceShape_layer);
-
     OGRGeometryH hGeometry_1;
     OGRGeometryH hGeometry_2;
     OGRFeatureDefnH hFDefn_reference;
     OGRFeatureDefnH hFDefn_new;
 
+
+    //------------field names ermitteln
+
+    referenceShape_feature = OGR_L_GetNextFeature(referenceShape_layer);
+    newShape_feature = OGR_L_GetNextFeature(newShape_layer);
+    hGeometry_1 = OGR_F_GetGeometryRef(referenceShape_feature);
+    hGeometry_2 = OGR_F_GetGeometryRef(newShape_feature);
+    hFDefn_reference = OGR_L_GetLayerDefn(referenceShape_layer);
+    hFDefn_new = OGR_L_GetLayerDefn(newShape_layer);
+    OGRFieldDefnH hFieldDefn_reference;
+    OGRFieldDefnH hFieldDefn_new;
+
+
+    for( iField = 0; iField < OGR_FD_GetFieldCount(hFDefn_reference); iField++ )
+    {
+            hFieldDefn_reference = OGR_FD_GetFieldDefn( hFDefn_reference, iField );
+            //cout <<  OGR_Fld_GetNameRef(hFieldDefn_reference) << endl;
+
+            OGRFieldDefnH hFieldDefn_input;
+
+            hFieldDefn_input = OGR_Fld_Create( OGR_Fld_GetNameRef(hFieldDefn_reference), OFTString );
+
+            OGR_Fld_SetWidth( hFieldDefn_input, 32);
+
+            if( OGR_L_CreateField( hLayer_ref, hFieldDefn_input, TRUE ) != OGRERR_NONE && OGR_L_CreateField( hLayer_all, hFieldDefn_input, TRUE ) != OGRERR_NONE)
+            {
+                printf( "Creating field failed.\n" );
+                exit( 1 );
+            }
+
+            //OGR_Fld_Destroy(hFieldDefn_input);
+    }
+    for(iField2 = 0; iField2 < OGR_FD_GetFieldCount(hFDefn_new); iField2++)
+    {
+            hFieldDefn_new = OGR_FD_GetFieldDefn( hFDefn_new, iField2 );
+            //cout <<  OGR_Fld_GetNameRef(hFieldDefn_new) << endl;
+
+            OGRFieldDefnH hFieldDefn_input;
+
+            hFieldDefn_input = OGR_Fld_Create( OGR_Fld_GetNameRef(hFieldDefn_new), OFTString );
+
+            OGR_Fld_SetWidth( hFieldDefn_input, 32);
+
+            if( OGR_L_CreateField( hLayer_new, hFieldDefn_input, TRUE ) != OGRERR_NONE && OGR_L_CreateField( hLayer_coord, hFieldDefn_input, TRUE ) != OGRERR_NONE)
+            {
+                printf( "Creating field failed.\n" );
+                exit( 1 );
+            }
+
+            //OGR_Fld_Destroy(hFieldDefn_input);
+    }
+
+    //to start at beginning of the layer
+    OGR_L_ResetReading(referenceShape_layer);
+
+
+    //Vergleichsalgorithmus startet hier
 
     while( (referenceShape_feature = OGR_L_GetNextFeature(referenceShape_layer)) != NULL )
     {
@@ -124,6 +230,8 @@ int main()
                     for( iField = 0; iField < OGR_FD_GetFieldCount(hFDefn_reference); iField++ )
                     {
                         hFieldDefn_reference = OGR_FD_GetFieldDefn( hFDefn_reference, iField );
+                        //cout <<  OGR_Fld_GetNameRef(hFieldDefn_reference) << endl;
+                        cout << OGR_Fld_GetWidth(hFieldDefn_reference) << endl;
 
                         for(iField2 = 0; iField2 < OGR_FD_GetFieldCount(hFDefn_new); iField2++)
                         {
@@ -144,7 +252,28 @@ int main()
                     if(OGR_FD_GetFieldCount(hFDefn_reference) == OGR_FD_GetFieldCount(hFDefn_new) && iEqual == OGR_FD_GetFieldCount(hFDefn_reference))
                     {
                         //in exaktgleich schreiben
-                        cout << "equal" << endl;
+                        OGRFeatureH hFeature_all;
+                        hFeature_all = OGR_F_Create( OGR_L_GetLayerDefn( hLayer_all ) );
+
+                         for( iField = 0; iField < OGR_FD_GetFieldCount(hFDefn_reference); iField++ )
+                         {
+                            //hFieldDefn_reference = OGR_FD_GetFieldDefn( hFDefn_reference, iField );
+                            ///mächtiges Indexproblem!! die Platzangabe für das Field ist nicht korrekt!!
+                            OGR_F_SetFieldString( hFeature_all, OGR_F_GetFieldIndex(hFeature_all, "name"), OGR_F_GetFieldAsString(referenceShape_feature, OGR_F_GetFieldIndex(referenceShape_feature, "name")) );
+                            //OGR_F_GetFieldIndex(hFeature_all, OGR_Fld_GetNameRef(hFieldDefn_input))
+
+                            OGRGeometryH hPt;
+                            hPt = OGR_G_CreateGeometry(wkbPoint);
+                            OGR_G_SetPoint_2D(hPt, 0, x, y);
+
+                            OGR_F_SetGeometry( hFeature_all, hPt );
+                            OGR_G_DestroyGeometry(hPt);
+                        //cout <<  OGR_Fld_GetNameRef(hFieldDefn_reference) << endl;
+                        //cout << OGR_Fld_GetWidth(hFieldDefn_reference) << endl;
+
+                        //cout << "equal" << endl;
+                        }
+
                     }
                     else
                     {
