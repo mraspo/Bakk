@@ -1,24 +1,3 @@
-/*
-*Title:         OSMOGDcompare
-*Author:        Michael Raspotnig
-*University:    TU Graz, Geomatics Engineering
-*Work-frame:    Bachelor thesis
-*Department:    Geoinformation
-*Semester:      WS/SS 2013/14
-*/
-//YCFHQ-9DWCY-DKV88-T2TMH-G7BHP
-
-#include <iostream>
-#include "ogr_api.h"
-#include "ogr_spatialref.h"
-#include "getShape.h"
-#include "getLayerName.h"
-//#include "geos_c.h"
-
-
-using namespace std;
-
-/*
 int main()
 {
 
@@ -98,7 +77,7 @@ int main()
         printf( "Layer creation failed.\n" );
         exit( 1 );
     }
-*/
+
 
 /*
 
@@ -110,7 +89,7 @@ int main()
 
     OGR_Fld_Destroy(hFieldDefn);
     //-------
-*//*
+*/
     shapename1 = shapeIn(iCounter++);
     shapename2 = shapeIn(iCounter);
 
@@ -169,7 +148,7 @@ int main()
             }
 
             OGR_Fld_Destroy(hFieldDefn_input);
-    }*/
+    }
     /*
     for(iField2 = 0; iField2 < OGR_FD_GetFieldCount(hFDefn_new); iField2++)
     {
@@ -190,7 +169,7 @@ int main()
 
             //OGR_Fld_Destroy(hFieldDefn_input);
     }*/
-/*
+
     //to start at beginning of the layer
     OGR_L_ResetReading(referenceShape_layer);
 
@@ -290,7 +269,7 @@ while(ii < 3)
                     if(OGR_FD_GetFieldCount(hFDefn_reference) == OGR_FD_GetFieldCount(hFDefn_new) && iEqual == OGR_FD_GetFieldCount(hFDefn_reference))
                     {
                         //in exaktgleich schreiben
-*/
+
                        // for( iField = 0; iField < OGR_FD_GetFieldCount(hFDefn_reference); iField++ )
                          //{
                          /*
@@ -322,7 +301,7 @@ while(ii < 3)
                                  exit( 1 );
                             }
 
-                            OGR_F_Destroy( hFeature_all );*/ /*
+                            OGR_F_Destroy( hFeature_all );*/
                         //cout <<  OGR_Fld_GetNameRef(hFieldDefn_reference) << endl;
                         //cout << OGR_Fld_GetWidth(hFieldDefn_reference) << endl;
 
@@ -365,100 +344,3 @@ while(ii < 3)
 
     return 0;
 }
-
-
-
-*/
-
-
-
-int main()
-{
-    const char *pszDriverName = "ESRI Shapefile";
-    OGRSFDriverH hDriver;
-    OGRDataSourceH hDS;
-    OGRLayerH hLayer;
-    OGRFieldDefnH hFieldDefn;
-    double x, y;
-    char szName[33];
-    char szHaus[33];
-    int iCounter = 0;
-
-    OGRRegisterAll();
-
-    hDriver = OGRGetDriverByName( pszDriverName );
-    if( hDriver == NULL )
-    {
-        printf( "%s driver not available.\n", pszDriverName );
-        exit( 1 );
-    }
-
-    hDS = OGR_Dr_CreateDataSource( hDriver, "point_out.shp", NULL );
-    if( hDS == NULL )
-    {
-        printf( "Creation of output file failed.\n" );
-        exit( 1 );
-    }
-
-    hLayer = OGR_DS_CreateLayer( hDS, "point_out", NULL, wkbPoint, NULL );
-    if( hLayer == NULL )
-    {
-        printf( "Layer creation failed.\n" );
-        exit( 1 );
-    }
-
-    hFieldDefn = OGR_Fld_Create( "name", OFTString );
-
-    OGR_Fld_SetWidth( hFieldDefn, 32);
-
-    if( OGR_L_CreateField( hLayer, hFieldDefn, TRUE ) != OGRERR_NONE )
-    {
-        printf( "Creating Name field failed.\n" );
-        exit( 1 );
-    }
-    OGR_Fld_Destroy(hFieldDefn);
-
-    //OGRFieldDefnH hFieldDefn;
-    hFieldDefn = OGR_Fld_Create( "haus", OFTString );
-
-    OGR_Fld_SetWidth( hFieldDefn, 32);
-
-    if( OGR_L_CreateField( hLayer, hFieldDefn, TRUE ) != OGRERR_NONE )
-    {
-        printf( "Creating Name field failed.\n" );
-        exit( 1 );
-    }
-
-    OGR_Fld_Destroy(hFieldDefn);
-
-    //while( !feof(stdin)
-        //   && fscanf( stdin, "%lf,%lf,%s", &x, &y, szName ) == 3 )
-
-        OGRFeatureH hFeature_all;
-        OGRGeometryH hPt;
-
-        hFeature_all = OGR_F_Create( OGR_L_GetLayerDefn( hLayer ) );
-        OGR_F_SetFieldString( hFeature_all, OGR_F_GetFieldIndex(hFeature_all, "name"), "bcd" );
-        cout << OGR_F_GetFieldIndex(hFeature_all, "name") << endl;
-        OGR_F_SetFieldString( hFeature_all, OGR_F_GetFieldIndex(hFeature_all, "haus"), "asdf" );
-        cout << OGR_F_GetFieldIndex(hFeature_all, "haus") << endl;
-
-        hPt = OGR_G_CreateGeometry(wkbPoint);
-        OGR_G_SetPoint_2D(hPt, 0, 1, 2);
-
-        OGR_F_SetGeometry( hFeature_all, hPt );
-        OGR_G_DestroyGeometry(hPt);
-
-        if( OGR_L_CreateFeature( hLayer, hFeature_all ) != OGRERR_NONE )
-        {
-           printf( "Failed to create feature in shapefile.\n" );
-           exit( 1 );
-        }
-
-        OGR_F_Destroy( hFeature_all );
-        iCounter++;
-
-
-   OGR_DS_Destroy( hDS );
-}
-
