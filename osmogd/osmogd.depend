@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1398353116 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
+1398436069 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
 	<iostream>
 	"ogr_api.h"
 	"ogr_spatialref.h"

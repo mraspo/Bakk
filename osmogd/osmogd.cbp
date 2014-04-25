@@ -43,11 +43,6 @@
 		<Unit filename="getShape.cpp" />
 		<Unit filename="getShape.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="points.cpg" />
-		<Unit filename="points.dbf" />
-		<Unit filename="points.prj" />
-		<Unit filename="points.shp" />
-		<Unit filename="points.shx" />
 		<Extensions>
 			<code_completion />
 			<envvars />
