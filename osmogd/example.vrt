@@ -1,0 +1,9 @@
+<OGRVRTDataSource>
+<OGRVRTLayer name="mylayer1">
+<SrcDataSource relativeToVRT="1">/my_dir</SrcDataSource>
+<SrcLayer>sample1</SrcLayer>
+<GeometryType>wkbPoint</GeometryType>
+<LayerSRS>WGS84</LayerSRS>
+<GeometryField encoding="PointFromColumns" x="long" y="lat"/>
+</OGRVRTLayer>
+</OGRVRTDataSource>

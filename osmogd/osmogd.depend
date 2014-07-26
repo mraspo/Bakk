@@ -1,10 +1,17 @@
 # depslib dependency file v1.0
-1398436069 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
+1403341008 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\main.cpp
 	<iostream>
+	<fstream>
+	<string>
 	"ogr_api.h"
 	"ogr_spatialref.h"
 	"getShape.h"
 	"getLayerName.h"
+	"getString.h"
+	"getBuffer.h"
+	"getFormat.h"
+	<ogr_spatialref.h>
+	"ogr_core.h"
 
 1263918564 c:\program files (x86)\fwtools2.4.7\include\ogrsf_frmts.h
 	"ogr_feature.h"
@@ -256,18 +263,21 @@
 	"cpl_progress.h"
 	"ogr_core.h"
 
-1394729725 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.cpp
+1403337408 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.cpp
 	"getShape.h"
 	<iostream>
 	<string>
+	<cstdlib>
+	<fstream>
 
-1394729727 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.h
+1403258253 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getshape.h
 
-1394733161 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.cpp
+1403274382 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.cpp
 	"getLayerName.h"
 	<string>
+	<iostream>
 
-1394732936 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.h
+1403274409 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getlayername.h
 
 1377439858 c:\warmerda\bld\include\geos_c.h
 	<stddef.h>
@@ -404,4 +414,29 @@
 
 1398262350 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\test.cpp
 	"ogr_api.h"
+
+1398522651 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getstring.cpp
+	"getString.h"
+	<string>
+
+1403274866 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getstring.h
+	<string>
+
+1403274844 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getbuffer.h
+
+1403337573 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getbuffer.cpp
+	"getBuffer.h"
+	<iostream>
+	<string>
+	<math.h>
+
+1403274831 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getformat.h
+
+1403278216 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\osmogd\getformat.cpp
+	"getFormat.h"
+	<cstdlib>
+	<fstream>
+	<iostream>
+	<string>
+	<cstdlib>
 

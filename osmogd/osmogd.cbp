@@ -22,26 +22,41 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/include" />
+					<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/bin/gdal-data" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-static -static-libgcc -static-libstdc++" />
+					<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\gdal_i.lib" />
+					<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\geos.lib" />
+					<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\geos_c.lib" />
+					<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/lib" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/include" />
+			<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/bin/gdal-data" />
 		</Compiler>
 		<Linker>
+			<Add option="-static -static-libgcc -static-libstdc++" />
 			<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\gdal_i.lib" />
 			<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\geos.lib" />
 			<Add library="E:\Uni\Geomatics Engineering\Bakk-Arbeit\GitHub\GDAL\32bit\lib\geos_c.lib" />
 			<Add directory="E:/Uni/Geomatics Engineering/Bakk-Arbeit/GitHub/GDAL/32bit/lib" />
 		</Linker>
+		<Unit filename="getBuffer.cpp" />
+		<Unit filename="getBuffer.h" />
+		<Unit filename="getFormat.cpp" />
+		<Unit filename="getFormat.h" />
 		<Unit filename="getLayerName.cpp" />
 		<Unit filename="getLayerName.h" />
 		<Unit filename="getShape.cpp" />
 		<Unit filename="getShape.h" />
+		<Unit filename="getString.cpp" />
+		<Unit filename="getString.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

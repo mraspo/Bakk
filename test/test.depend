@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1398524128 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\test\getstring.cpp
+	"getString.h"
+	<iostream>
+	<string>
+	<math.h>
+
+1398523787 e:\uni\geomatics engineering\bakk-arbeit\github\bakk\test\getstring.h
+
+1398523927 source:e:\uni\geomatics engineering\bakk-arbeit\github\bakk\test\main.cpp
+	<iostream>
+	"stdio.h"
+	<string>
+	"getString.h"
+
